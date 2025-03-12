@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Calculator</title>
+</head>
+<body>
+    <h1> Web Calculator </h1>
+    <input type="numer" id="num1" placeholder="Enter a number">
+    <button onclick="sayHello()">Greet</button>
+    <p id="output"></p>
+
+    <script type="module">
+        import init, { greet } from "./pkg/rust_wasm_demo.js";
+    
+        async function run() {
+            await init(); // Initialize WebAssembly
+        }
+    
+        
+
+        window.sayHello = sayHello;
+    
+        run();
+    </script>
+    
+
+</body>
+</html>
