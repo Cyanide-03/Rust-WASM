@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Web Calculator</title>
 </head>
 <body>
     <h1> Web Calculator </h1>
-    <input type="numer" id="num1" placeholder="Enter a number">
-    <select id="operator">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    <input type="numer" id="num2" placeholder="Enter a number">
-    <button id="calculate_btn">Calculate</button>
-    <p id="output"></p>
+
+    <div>
+        <input type="numer" id="num1" placeholder="Enter a number">
+    </div>
+
+    <div>
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="numer" id="num2" placeholder="Enter a number">
+    </div>
+
+    <div>
+        <button id="calculate_btn">Calculate</button>
+    </div>
+
+    <div>
+        <p id="output"></p>
+    </div>
 
     <script type="module">
         import init, { calculate } from "./pkg/rust_wasm_demo.js";
